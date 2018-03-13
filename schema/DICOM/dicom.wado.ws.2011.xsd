@@ -118,7 +118,7 @@
 
   <xs:complexType name="RetrieveRenderedImagingDocumentResponseType">
     <xs:sequence>
-      <xs:element name="RetrieveDocumentSetResponse" type="RetrieveDocumentSetResponseType"/>
+      <xs:element name="RetrieveDocumentSetResponse" type="ihe:RetrieveDocumentSetResponseType"/>
       <xs:element name="RenderedDocumentResponse" minOccurs="0" maxOccurs="unbounded">
         <xs:complexType>
           <xs:sequence>
