@@ -50,7 +50,7 @@
 	</message>
 	<message name="RetrieveDocumentSetResponse_Message">
 		<documentation>Retrieve Document Set Response</documentation>
-		<part name="body" element="ihe:RetrieveDocumentSetResponse"/>
+		<part name="body" element="ihe:RetrieveDocumentResponse"/>
 	</message>
 	<message name="RetrieveRenderedImagingDocumentSetRequest_Message">
 		<documentation>Retrieve Rendered Imaging Document Set</documentation>
@@ -58,7 +58,7 @@
 	</message>
 	<message name="RetrieveRenderedImagingDocumentSetResponse_Message">
 		<documentation>Retrieve Rendered Imaging Document Set Response</documentation>
-		<part name="body" element="wado:RetrieveRenderedImagingDocumentSetResponse"/>
+		<part name="body" element="wado:RetrieveRenderedImagingDocumentResponse"/>
 	</message>
 	<message name="RetrieveImagingDocumentSetInformationRequest_Message">
 		<documentation>Retrieve Imaging Document Set Information</documentation>

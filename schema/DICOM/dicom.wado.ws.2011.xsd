@@ -35,10 +35,10 @@
   <xs:element name="Region">
     <xs:complexType>
       <xs:sequence>
-	<xs:element name="XMin" type="xs:double"/>
-	<xs:element name="YMin" type="xs:double"/>
-	<xs:element name="XMax" type="xs:double"/>
-	<xs:element name="YMax" type="xs:double"/>
+        <xs:element name="XMin" type="xs:double" />
+        <xs:element name="YMin" type="xs:double" />
+        <xs:element name="XMax" type="xs:double" />
+        <xs:element name="YMax" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -93,7 +93,6 @@
                         <xs:element ref="Rows" minOccurs="0"/>
                         <xs:element ref="Columns" minOccurs="0"/>
                         <xs:element ref="Region" minOccurs="0" />
-                        <xs:element ref="WindowCenter" minOccurs="0"/>
                         <xs:element ref="WindowWidth" minOccurs="0"/>
                         <xs:element ref="ImageQuality" minOccurs="0"/>
                         <xs:element ref="PresentationUID" minOccurs="0"/>
@@ -117,10 +116,10 @@
   </xs:complexType>
   <xs:element name="RetrieveRenderedImagingDocumentSetRequest" type="RetrieveRenderedImagingDocumentSetRequestType"/>
 
-  <xs:complexType name="RetrieveRenderedImagingDocumentSetResponseType">
+  <xs:complexType name="RetrieveRenderedImagingDocumentResponseType">
     <xs:sequence>
-      <xs:element name="RegistryResponse" type="rs:RegistryResponseType"/>
-      <xs:element name="RenderedDocumentSetResponse" minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="RetrieveDocumentSetResponse" type="RetrieveDocumentSetResponseType"/>
+      <xs:element name="RenderedDocumentResponse" minOccurs="0" maxOccurs="unbounded">
         <xs:complexType>
           <xs:sequence>
             <xs:element ref="ihe:HomeCommunityId" minOccurs="0"/>
@@ -144,7 +143,14 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="RetrieveRenderedImagingDocumentSetResponse" type="RetrieveRenderedImagingDocumentSetResponseType"/>
+  <xs:element name="RetrieveRenderedImagingDocumentResponse" type="RetrieveRenderedImagingDocumentResponseType"/>
+
+  <xs:complexType name="RetrieveDocumentSetResponseType">
+    <xs:sequence>
+      <xs:element name="RegistryResponse" type="rs:RegistryResponseType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveDocumentSetResponse" type="RetrieveDocumentSetResponseType"/>
 
   <!--
 		This action retrieves a set of DICOM instances presented as an Infoset with the bulk data removed.

@@ -74,9 +74,9 @@
 	</xs:element>
 	
 	<!-- Extended with optional WADO parameter -->
-	<xs:complexType name="RetrieveDocumentSetResponseType">
+	<xs:complexType name="RetrieveDocumentResponseType">
 		<xs:sequence>
-			<xs:element ref="rs:RegistryResponse"/>
+			<xs:element ref="wado:RetrieveDocumentSetResponse"/>
 			<xs:sequence>
 				<xs:element name="DocumentResponse" maxOccurs="unbounded">
 					<xs:complexType>
@@ -93,5 +93,5 @@
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="RetrieveDocumentSetResponse" type="RetrieveDocumentSetResponseType"/>
+	<xs:element name="RetrieveDocumentResponse" type="RetrieveDocumentResponseType"/>
 </xs:schema>
