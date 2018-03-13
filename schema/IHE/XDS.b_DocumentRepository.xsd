@@ -74,6 +74,13 @@
 	</xs:element>
 	
 	<!-- Extended with optional WADO parameter -->
+	<xs:complexType name="RetrieveDocumentSetResponseType">
+		<xs:sequence>
+			<xs:element ref="rs:RegistryResponse"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="RetrieveDocumentSetResponse" type="RetrieveDocumentSetResponseType"/>
+
 	<xs:complexType name="RetrieveDocumentResponseType">
 		<xs:sequence>
 			<xs:element ref="RetrieveDocumentSetResponse"/>
